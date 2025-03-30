@@ -1,9 +1,19 @@
-:root {
-    box-sizing: border-box;
+@font-face {
+    font-family: "fortnite";
+    src: url("fonts/fortnite.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-h1 {
+:root {
+    box-sizing: border-box;
+    --default-height: 923px;
+}
+
+.inner-text > h1 {
     color: red;
+    font-family: "fortnite";
 }
 
 body {
@@ -13,12 +23,13 @@ body {
 .left-section {
     background-color: lightblue;
     width: max(30%, 700px);
-    height: 98vh;
+    height: var(--default-height);
 }
 
 .right-section {
     background-color: lightgreen;
-    width: 80%;
+    width: max(80%, 1000px);
+    height: var(--default-height);
 }
 
 .image-container > img {
