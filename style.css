@@ -3,46 +3,76 @@
     src: url("fonts/fortnite.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 :root {
     box-sizing: border-box;
-    --default-height: 923px;
-}
-
-.inner-text > h1 {
-    color: red;
-    font-family: "fortnite";
+    font-size: 100%;
+    --height: 923px;
+    --leftsection-width: 1263px;
+    --rightsection-width: 649px;
+    --leftsection-textcolor: white;
 }
 
 body {
     display: flex;
 }
 
+.title-container > h1 {
+    color: var(--leftsection-textcolor);
+    margin: 0;
+    font-size: 10rem;
+    font-family: "fortnite";
+}
+
+.image-credits-container {
+    color: var(--leftsection-textcolor);
+}
+
 .left-section {
-    background-color: lightblue;
-    width: max(30%, 700px);
-    height: var(--default-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--height);
+    flex: 0 0 var(--leftsection-width);
+}
+
+.left-section > img {
+    position: absolute;
+    width: var(--leftsection-width);
+    height: var(--height);
+}
+
+.image-credits-container {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    margin-top: 850px;
+}
+
+p > a:link {
+    color: var(--leftsection-textcolor);
+}
+
+p > a:hover {
+    color: rgb(61, 77, 255); 
+}
+
+p > a:visited {
+    color: rgb(71, 0, 104);
+}
+
+.title-container {
+    position: absolute;
+    margin-top: 230px;
+    padding: 80px 0;
+    text-align: center;
+    width: var(--leftsection-width);
+    background-color: rgb(28, 28, 28, 0.6);
 }
 
 .right-section {
-    background-color: lightgreen;
-    width: max(80%, 1000px);
-    height: var(--default-height);
+    height: var(--height);
+    flex: 0 0 var(--rightsection-width);
 }
-
-.image-container > img {
-    width: 20%;
-}
-
-/*
-
-.image-container > img {
-    position: absolute;
-}
-
-.image-container .inner-text > h1{
-    position: absolute;
-}
-    */
