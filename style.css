@@ -13,6 +13,8 @@
     --leftsection-width: 1263px;
     --rightsection-width: 649px;
     --leftsection-textcolor: white;
+    --light-blue-fortnite: rgb(14, 128, 251);
+    --yellow-fortnite: rgb(255, 236, 29);
 }
 
 body {
@@ -59,8 +61,6 @@ p > a:hover {
     color: rgb(61, 77, 255); 
 }
 
-
-
 .title-container {
     position: absolute;
     margin-top: 230px;
@@ -84,7 +84,8 @@ p > a:hover {
 form {
     display: flex;
     flex-direction: column;
-    border: 5px red solid;
+    border: 5px var(--light-blue-fortnite) solid;
+    background-color: rgb(34, 92, 155);
     margin: auto;
     width: 550px;
     justify-content: center;
@@ -92,12 +93,14 @@ form {
 }
 
 form > h3 {
+    color: var(--yellow-fortnite);
     margin: 30px;
     font-size: 3rem;
     text-align: center;
 }
 
 ul{
+    color: var(--light-blue-fortnite);
     padding: 29px;
     margin: 0;
     font-size: 1.5rem;
@@ -105,15 +108,23 @@ ul{
 
 li {
     display: flex;
+    margin: 10px 0;
     justify-content: space-between;
     gap: 19px;
 }
 
 button {
     font-family: "fortnite";
-    font-size: 2rem;
+    font-size: 2.6rem;
     flex: 0 0;
     width: 400px;
     margin-bottom: 50px;
     padding: 50px;
+    background-color: var(--yellow-fortnite);
+}
+
+.right-section .introduction-text {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 600px;
 }
