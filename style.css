@@ -15,6 +15,9 @@
     --leftsection-textcolor: white;
     --light-blue-fortnite: rgb(14, 128, 251);
     --yellow-fortnite: rgb(255, 236, 29);
+    --rightsection-logincolor: black;
+    --rightsection-loginsize: 1.5rem;
+    --link-hovercolor: rgb(61, 77, 255); 
 }
 
 body {
@@ -53,12 +56,20 @@ body {
     margin-top: 850px;
 }
 
+p > a {
+    color: var(--leftsection-textcolor);
+}
+
 p > a:link {
     color: var(--leftsection-textcolor);
 }
 
 p > a:hover {
-    color: rgb(61, 77, 255); 
+    color: var(--link-hovercolor); 
+}
+
+p > a:visited {
+    color: var(--leftsection-textcolor);
 }
 
 .title-container {
@@ -128,3 +139,24 @@ button {
     text-align: center;
     width: 600px;
 }
+
+.right-section .login-text {
+    font-size: var(--rightsection-loginsize);
+}
+
+.right-section .login-text > a:hover {
+    font-size: var(--link-hovercolor);
+}
+
+.right-section .login-text > a {
+    color: var(--rightsection-logincolor);
+}
+
+.right-section .login-text > a:link {
+    color: var(--rightsection-logincolor);
+}
+
+.right-section .login-text > a:visited {
+    color: var(--rightsection-logincolor);
+}
+
