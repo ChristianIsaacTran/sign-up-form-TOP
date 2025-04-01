@@ -105,9 +105,14 @@ form {
 
 form > h3 {
     color: var(--yellow-fortnite);
-    margin: 30px;
+    margin: 25px 30px 0 30px;
     font-size: 3rem;
     text-align: center;
+}
+
+form > h4 {
+    margin: 0;
+
 }
 
 ul{
@@ -160,3 +165,13 @@ button {
     color: var(--rightsection-logincolor);
 }
 
+
+/*form validation*/
+
+form input:invalid {
+    border: 2px red solid;
+}
+
+form input:valid {
+    border: 2px green solid;
+}
